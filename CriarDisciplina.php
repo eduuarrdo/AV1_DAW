@@ -3,16 +3,15 @@
     $usuario = "root";
     $senha = "";
     $bancodedados = "acesso";
-
+/*
     $nome = "";
     $ID = 0;
     $Periodo = 0;
     $IDPre = 0;
     $Creditos = 0;
-
+*/
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $nome = $_POST["nome"];
-        $ID = $_POST["id"];
         $Periodo = $_POST["periodo"];
         $IDPre = $_POST["idPre"];
         $Creditos = $_POST["cred"];
@@ -22,14 +21,16 @@
         if($conn->connect_error)
         {
             die("Erro de conecão com o banco de dados");
+        }else{
+            echo "Conexão com banco bem sucedida!";
         }
 
-        $sql = "INSERT INTO `disciplinas`(`Nome`, `ID`, `Período`, `IDPreReq`, `Créditos`) VALUES (`$nome`,`$ID`,`$Periodo`,`$IDPre`,`$Creditos`)";
+        $sql = "INSERT INTO `disciplinas`(`nome`, `Período`, `IdPre`, `Creditos`) VALUES (`$nome`,`$Periodo`,`$IDPre`,`$Creditos`)";
         $resul = $conn->query($sql);
 
         if($resul>0)
         {
-             echo "Disciplina Criada!";
+             echo " Disciplina Criada! ";
         }
        
 
@@ -64,7 +65,6 @@
 
             <form action="CriarDisciplina.php" method="POST">
             Nome da Disciplina <input type="text" name="nome"><br>
-            ID <input type="text" name="id"><br>
             Período <input type="text" name="periodo"><br>
             ID Pre Requisitos <input type="text" name="idPre"><br>
             Creditos <input type="text" name="cred"><br><br>
