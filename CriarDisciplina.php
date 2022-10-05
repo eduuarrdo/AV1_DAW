@@ -10,6 +10,7 @@
     $IDPre = 0;
     $Creditos = 0;
 */
+//APÓS O SUBMIT, HÁ A MENSAGEM DE CONEXÃO BEM SUCEDIDA COM O BANCO DE DADOS, PORÉM A TABELA NÃO É PREENCHIDA (NÃO SEI O PORQUÊ)
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $nome = $_POST["nome"];
         $Periodo = $_POST["periodo"];
