@@ -20,13 +20,14 @@
 
         if($conn->connect_error)
         {
-            die("Erro de conecão com o banco de dados");
+            die("Erro de conexão com o banco de dados");
         }else{
             echo "Conexão com banco bem sucedida!";
         }
 
-        $sql = "INSERT INTO `disciplinas`(`nome`, `Período`, `IdPre`, `Creditos`) VALUES (`$nome`,`$Periodo`,`$IDPre`,`$Creditos`)";
-        $result = $conn->query($sql);
+        $sql = "INSERT INTO `disciplinas`(`nome`, `Período`, `IdPre`, `Creditos`) VALUES ('$nome','$Periodo','$IDPre','$Creditos')"; 
+
+        $result = $conn-> query($sql);
 
         if($result>0)
         {
@@ -53,7 +54,7 @@
 ?>
 
 <!Doctype html>
-    <html>
+    <html lang="pt">
         <head>
             <meta charset="UTF-8">
             <title> Criar Disciplina </title>
