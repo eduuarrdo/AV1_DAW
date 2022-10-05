@@ -26,9 +26,9 @@
         }
 
         $sql = "INSERT INTO `disciplinas`(`nome`, `Período`, `IdPre`, `Creditos`) VALUES (`$nome`,`$Periodo`,`$IDPre`,`$Creditos`)";
-        $resul = $conn->query($sql);
+        $result = $conn->query($sql);
 
-        if($resul>0)
+        if($result>0)
         {
              echo " Disciplina Criada! ";
         }
@@ -64,10 +64,17 @@
         <h3> Preencha os campos para criação da disciplina </h3>
 
             <form action="CriarDisciplina.php" method="POST">
-            Nome da Disciplina <input type="text" name="nome"><br>
-            Período <input type="text" name="periodo"><br>
-            ID Pre Requisitos <input type="text" name="idPre"><br>
-            Creditos <input type="text" name="cred"><br><br>
+            <label for="nome">Nome da Disciplina </label>
+            <input type="text" name="nome"><br>
+
+            <label for="nome">Período</label>
+            <input type="text" name="periodo"><br>
+
+            <label for="nome"> ID Pre Requisitos  </label>
+            <input type="text" name="idPre"><br>
+
+            <label for="nome"> Creditos </label>
+            <input type="text" name="cred"><br><br>
             <input type="submit" value="Criar Disciplina">
             </form>
 
