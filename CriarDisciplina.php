@@ -64,16 +64,16 @@
         <h3> Preencha os campos para criação da disciplina </h3>
 
             <form action="CriarDisciplina.php" method="POST">
-            <label for="nome">Nome da Disciplina </label>
-            <input type="text" name="nome"><br>
+            <label for="nome">Nome da Disciplina </label><br>
+            <input type="text" name="nome"><br><br>
 
-            <label for="nome">Período</label>
-            <input type="text" name="periodo"><br>
+            <label for="nome">Período</label><br>
+            <input type="text" name="periodo"><br><br>
 
-            <label for="nome"> ID Pre Requisitos  </label>
-            <input type="text" name="idPre"><br>
+            <label for="nome"> ID Pre Requisitos  </label><br>
+            <input type="text" name="idPre"><br><br>
 
-            <label for="nome"> Creditos </label>
+            <label for="nome"> Creditos </label><br>
             <input type="text" name="cred"><br><br>
             <input type="submit" value="Criar Disciplina">
             </form>
